@@ -1,0 +1,14 @@
+<!-- -*- mode: XML -*- -->
+<launch>
+
+    <node pkg="map_server" name="map_server" type="map_server" args="$(find jps)/maps/nav.yaml"/>
+    <node pkg="jps" type="jps" name="jps" output="screen">
+        <param name="Euclidean" value="true"/>
+        <param name="OccupyThresh" value="-1"/>
+        <param name="InflateRadius" value="0.25"/>
+        <param name="rate" value="10"/>
+    </node>
+
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find jps)/rviz/astar.rviz"/>
+
+</launch>

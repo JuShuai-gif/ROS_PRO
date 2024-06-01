@@ -1,0 +1,11 @@
+<launch>
+    <arg name="launch_prefix" default=""/>
+    <param name="use_sim_time" value="true"/>
+<!-- 
+
+    
+-->
+    <node pkg="person_pkg" type="lis_person" name="lis_person" output="screen"  launch-prefix="xterm -e gdb -ex run --args"/>
+    
+    <node pkg="person_pkg" type="pub_person" name="pub_person" output="screen"/> 
+</launch>

@@ -1,0 +1,13 @@
+<launch>
+    <!-- 以一个特定的世界场景启动Gazebo -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(find sim_env)/worlds/warehouse.world" />
+        <arg name="use_sim_time" value="true" />
+    </include>
+
+    <!-- 开始地图服务并发布地图 -->
+    <node name="map_server" pkg="map_server" type="map_server" args="$(find sim_env)/maps/warehouse/warehouse.yaml" />
+
+    <include file="$(find sim_env)/launch/start_robots.launch.xml"/>
+
+</launch>
