@@ -1,0 +1,16 @@
+<library path="lib/libpluginlib_Rect">
+    <!-- 
+        name : 类的查找名.作为插件的标志被插件库使用
+        type : 功能类的类型全名
+        base_class_type : 基类的类型全名
+        description :描述功能类的功能
+    --> 
+    <class name="pluginlib_Rect/regular_triangle" type="polygon_plugins::Triangle" base_class_type="polygon_base::RegularPolygon">
+        <description>This is a triangle plugin.</description>
+    </class>
+
+    <class name="pluginlib_Rect/regular_square" type="polygon_plugins::Square" base_class_type="polygon_base::RegularPolygon">
+        <description>This is a square plugin.</description>
+    </class>
+
+</library>

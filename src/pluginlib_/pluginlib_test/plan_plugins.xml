@@ -1,0 +1,11 @@
+<library path="lib/libpluginlib_test">
+
+    <class name="pluginlib_test/plan_astr" type="plan_plugins::Astr" base_class_type="plan_base::PathPlan">
+        <description>This is a atra plugin.</description>
+    </class>
+
+    <class name="pluginlib_test/plan_dijkstra" type="plan_plugins::Dijkstra" base_class_type="plan_base::PathPlan">
+        <description>This is a dij plugin.</description>
+    </class>
+    
+</library>
